@@ -42,9 +42,17 @@ To unlock full global coverage for aircraft and ships, you should add your free 
 3. Refer to [**FREE_API_SETUP.md**](./FREE_API_SETUP.md) for direct links to get these keys for free.
 
 ### 4. Start AEGIS
-Run the following command to build and start all services:
+
+#### Option A: One-Click Local (Native)
+Run the following command to start all services natively on your laptop (requires Python 3 and Node.js):
 ```bash
-docker-compose up -d --build
+./start-local.sh
+```
+
+#### Option B: Dockerized
+Run the following command to build and start all services in containers:
+```bash
+docker-compose -f docker-compose.local.yml up -d --build
 ```
 *Note: If you have Docker Compose V2, you can also use `docker compose up -d --build`.*
 

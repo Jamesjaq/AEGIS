@@ -64,9 +64,17 @@ class ShadowBrokerBridge:
 
     def transform_to_geoentities(self, sb_data: Dict[str, Any]) -> List[Dict[str, Any]]:
         entities = []
+        if not isinstance(sb_data, dict):
+            return entities
+
+        # Helper to safely iterate over lists
+        def safe_list(key):
+            val = sb_data.get(key, [])
+            return val if isinstance(val, list) else []
 
         # 1. Flights
-        for flight in sb_data.get("commercial_flights", []):
+        for flight in safe_list("commercial_flights"):
+            if not isinstance(flight, dict): continue
             entities.append({
                 "id": f"flight-{flight.get('icao24')}",
                 "pluginId": "shadow-bridge",
@@ -79,7 +87,8 @@ class ShadowBrokerBridge:
                 "label": flight.get("callsign", "N/A"),
                 "properties": { **flight, "layer": "aviation", "sub_layer": "commercial" }
             })
-        for flight in sb_data.get("military_flights", []):
+        for flight in safe_list("military_flights"):
+            if not isinstance(flight, dict): continue
             entities.append({
                 "id": f"mil-{flight.get('icao24')}",
                 "pluginId": "shadow-bridge",
@@ -92,7 +101,8 @@ class ShadowBrokerBridge:
             })
 
         # 2. Ships
-        for ship in sb_data.get("ships", []):
+        for ship in safe_list("ships"):
+            if not isinstance(ship, dict): continue
             entities.append({
                 "id": f"ship-{ship.get('mmsi')}",
                 "pluginId": "shadow-bridge",
@@ -100,12 +110,14 @@ class ShadowBrokerBridge:
                 "longitude": ship.get("lon"),
                 "heading": ship.get("heading"),
                 "speed": ship.get("speed"),
+                "timestamp": ship.get("timestamp"),
                 "label": ship.get("name", "N/A"),
                 "properties": { **ship, "layer": "maritime" }
             })
 
         # 3. Conflicts (GDELT)
-        for event in sb_data.get("gdelt", []):
+        for event in safe_list("gdelt"):
+            if not isinstance(event, dict): continue
             entities.append({
                 "id": f"conflict-{event.get('id')}",
                 "pluginId": "shadow-bridge",
@@ -116,7 +128,8 @@ class ShadowBrokerBridge:
             })
 
         # 4. Fires (NASA FIRMS)
-        for fire in sb_data.get("firms_fires", []):
+        for fire in safe_list("firms_fires"):
+            if not isinstance(fire, dict): continue
             entities.append({
                 "id": f"fire-{fire.get('lat')}-{fire.get('lon')}",
                 "pluginId": "shadow-bridge",
@@ -127,7 +140,8 @@ class ShadowBrokerBridge:
             })
 
         # 5. Earthquakes
-        for quake in sb_data.get("earthquakes", []):
+        for quake in safe_list("earthquakes"):
+            if not isinstance(quake, dict): continue
             entities.append({
                 "id": f"quake-{quake.get('id')}",
                 "pluginId": "shadow-bridge",
@@ -138,7 +152,8 @@ class ShadowBrokerBridge:
             })
 
         # 6. Satellites
-        for sat in sb_data.get("satellites", []):
+        for sat in safe_list("satellites"):
+            if not isinstance(sat, dict): continue
             entities.append({
                 "id": f"sat-{sat.get('satid')}",
                 "pluginId": "shadow-bridge",
@@ -150,7 +165,8 @@ class ShadowBrokerBridge:
             })
 
         # 7. Air Quality
-        for aq in sb_data.get("air_quality", []):
+        for aq in safe_list("air_quality"):
+            if not isinstance(aq, dict): continue
             entities.append({
                 "id": f"aq-{aq.get('id')}",
                 "pluginId": "shadow-bridge",
@@ -161,7 +177,8 @@ class ShadowBrokerBridge:
             })
 
         # 8. Fishing
-        for fish in sb_data.get("fishing_activity", []):
+        for fish in safe_list("fishing_activity"):
+            if not isinstance(fish, dict): continue
             entities.append({
                 "id": f"fish-{fish.get('id')}",
                 "pluginId": "shadow-bridge",
@@ -172,7 +189,8 @@ class ShadowBrokerBridge:
             })
 
         # 9. Internet Outages
-        for outage in sb_data.get("internet_outages", []):
+        for outage in safe_list("internet_outages"):
+            if not isinstance(outage, dict): continue
             entities.append({
                 "id": f"outage-{outage.get('region')}",
                 "pluginId": "shadow-bridge",
@@ -183,7 +201,8 @@ class ShadowBrokerBridge:
             })
 
         # 10. Trains
-        for train in sb_data.get("trains", []):
+        for train in safe_list("trains"):
+            if not isinstance(train, dict): continue
             entities.append({
                 "id": f"train-{train.get('id')}",
                 "pluginId": "shadow-bridge",

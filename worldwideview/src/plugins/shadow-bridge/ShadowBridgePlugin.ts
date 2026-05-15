@@ -46,7 +46,7 @@ export class ShadowBridgePlugin implements WorldPlugin {
     public version = "1.0.0";
 
     private context!: PluginContext;
-    private baseUrl = "http://localhost:8001";
+    private baseUrl = "http://localhost:5000";
     private demoInterval: any = null;
     private demoEntities: GeoEntity[] = [];
 

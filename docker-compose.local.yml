@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # AEGIS Unified Bridge
+  aegis-bridge:
+    build:
+      context: ./unified-api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - DEMO_MODE=true
+      - SB_BACKEND_URL=http://aegis-shadow:8000
+    restart: unless-stopped
+
+  # WorldWideView 3D Globe
+  aegis-globe:
+    build:
+      context: ./worldwideview
+    ports:
+      - "3000:3000"
+    environment:
+      - SKIP_DB=true
+      - DEMO_MODE=true
+      - NEXT_PUBLIC_WWV_PLUGIN_DATA_ENGINE_URL=http://localhost:5000
+      - SHADOW_BRIDGE_URL=http://aegis-bridge:5000
+    depends_on:
+      - aegis-bridge
+    restart: unless-stopped
+
+  # ShadowBroker Data Backend
+  aegis-shadow:
+    build:
+      context: ./shadowbroker/backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DEMO_MODE=true
+    restart: unless-stopped
