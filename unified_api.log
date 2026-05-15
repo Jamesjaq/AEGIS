@@ -34,3 +34,9 @@ INFO:httpx:HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/s
 INFO:httpx:HTTP Request: GET https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle "HTTP/1.1 403 Forbidden"
 INFO:httpx:HTTP Request: GET https://api.gdeltproject.org/api/v2/events/events?format=json&query=conflict "HTTP/1.1 404 Not Found"
 INFO:aegis-bridge:Analysis cycle complete.
+INFO:aegis-bridge:Starting intelligence analysis cycle...
+ERROR:ingestors.bridge_logic:Failed to bridge ShadowBroker data: All connection attempts failed
+INFO:httpx:HTTP Request: GET https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle "HTTP/1.1 403 Forbidden"
+INFO:httpx:HTTP Request: GET https://api.gdeltproject.org/api/v2/events/events?format=json&query=conflict "HTTP/1.1 404 Not Found"
+INFO:aegis-bridge:Analysis cycle complete.
