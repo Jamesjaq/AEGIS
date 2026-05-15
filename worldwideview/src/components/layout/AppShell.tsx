@@ -18,6 +18,7 @@ import { BottomPanelManager } from "@/components/layout/BottomPanelManager";
 import { TimelineSync } from "@/core/globe/TimelineSync";
 import { pluginManager } from "@/core/plugins/PluginManager";
 import { pluginRegistry } from "@/core/plugins/PluginRegistry";
+import { ShadowBridgePlugin } from "@/plugins/shadow-bridge/ShadowBridgePlugin";
 
 import { useStore } from "@/core/state/store";
 import { dataBus } from "@/core/data/DataBus";
@@ -110,6 +111,9 @@ export function AppShell() {
 
 
             await pluginManager.init();
+
+            // Register built-in plugins
+            pluginRegistry.register(new ShadowBridgePlugin());
 
             for (const plugin of pluginRegistry.getAll()) {
                 await pluginManager.registerPlugin(plugin);

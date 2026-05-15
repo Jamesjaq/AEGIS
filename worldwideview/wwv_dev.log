@@ -1,0 +1,433 @@
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 546ms
+- Experiments (use with caution):
+  · cpus: 2
+  ✓ memoryBasedWorkersCount
+  · optimizePackageImports
+
+○ Compiling / ...
+ GET / 200 in 25.3s (next.js: 23.1s, proxy.ts: 270ms, application-code: 1939ms)
+ GET / 200 in 133ms (next.js: 10ms, proxy.ts: 20ms, application-code: 102ms)
+ GET /cesium/Widgets/widgets.css 404 in 1326ms (next.js: 1240ms, proxy.ts: 19ms, application-code: 68ms)
+ GET /cesium/Assets/approximateTerrainHeights.json 404 in 239ms (next.js: 23ms, proxy.ts: 23ms, application-code: 193ms)
+ GET /cesium/Assets/IAU2006_XYS/IAU2006_XYS_18.json 404 in 227ms (next.js: 115ms, proxy.ts: 14ms, application-code: 99ms)
+○ Compiling /api/auth/[...nextauth] ...
+ GET /cesium/Assets/Images/ion-credit.png 404 in 129ms (next.js: 13ms, proxy.ts: 21ms, application-code: 94ms)
+ GET /cesium/Assets/Images/ion-credit.png 404 in 115ms (next.js: 19ms, proxy.ts: 7ms, application-code: 89ms)
+[browser] "⨯ unhandledRejection:" [object Object]
+
+ GET /cesium/Workers/createVerticesFromHeightmap.js 404 in 1167ms (next.js: 26ms, proxy.ts: 10ms, application-code: 1131ms)
+[marketplace/disabled-builtins] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async getDisabledPluginIds (src/lib/marketplace/repository.ts:68:21)
+    at async GET (src/app/api/marketplace/disabled-builtins/route.ts:21:26)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/disabled-builtins 200 in 2.0s (next.js: 1183ms, proxy.ts: 33ms, application-code: 807ms)
+ GET /cesium/Workers/transferTypedArrayTest.js 404 in 1756ms (next.js: 119ms, proxy.ts: 13ms, application-code: 1624ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_px.jpg 404 in 1186ms (next.js: 62ms, proxy.ts: 594ms, application-code: 530ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mx.jpg 404 in 1170ms (next.js: 129ms, proxy.ts: 594ms, application-code: 446ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_my.jpg 404 in 584ms (next.js: 236ms, proxy.ts: 33ms, application-code: 315ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_py.jpg 404 in 583ms (next.js: 289ms, proxy.ts: 33ms, application-code: 261ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_pz.jpg 404 in 568ms (next.js: 366ms, proxy.ts: 91ms, application-code: 111ms)
+ GET /api/auth/session 200 in 6.5s (next.js: 6.4s, proxy.ts: 11ms, application-code: 32ms)
+[marketplace/disabled-builtins] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async getDisabledPluginIds (src/lib/marketplace/repository.ts:68:21)
+    at async GET (src/app/api/marketplace/disabled-builtins/route.ts:21:26)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/disabled-builtins 200 in 479ms (next.js: 124ms, proxy.ts: 16ms, application-code: 339ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mz.jpg 404 in 767ms (next.js: 32ms, proxy.ts: 12ms, application-code: 723ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_px.jpg 404 in 766ms (next.js: 150ms, proxy.ts: 16ms, application-code: 600ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mx.jpg 404 in 768ms (next.js: 190ms, proxy.ts: 16ms, application-code: 562ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_my.jpg 404 in 690ms (next.js: 390ms, proxy.ts: 59ms, application-code: 240ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_py.jpg 404 in 695ms (next.js: 113ms, proxy.ts: 341ms, application-code: 241ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_pz.jpg 404 in 385ms (next.js: 73ms, proxy.ts: 74ms, application-code: 238ms)
+[browser] An error occurred while rendering.  Rendering has stopped.
+[object Object]
+undefined
+    at console.<computed> [as error] (src/lib/logCatcher.ts:34:22)
+  32 |         console[name] = (...args: any[]) => {
+  33 |             // Forward to original console
+> 34 |             original.apply(console, args);
+     |                      ^
+  35 |
+  36 |             try {
+  37 |                 // Stringify arguments safely, aggressively optimizing performance  (src/lib/logCatcher.ts:34:22)
+[browser] [Cesium Render Error] Render loop crashed! Exception:
+    at console.<computed> [as error] (src/lib/logCatcher.ts:34:22)
+    at useViewerInitialization.useCallback[handleViewerReady] (src/core/globe/hooks/useViewerInitialization.ts:47:21)
+  32 |         console[name] = (...args: any[]) => {
+  33 |             // Forward to original console
+> 34 |             original.apply(console, args);
+     |                      ^
+  35 |
+  36 |             try {
+  37 |                 // Stringify arguments safely, aggressively optimizing performance  (src/lib/logCatcher.ts:34:22)
+[browser] [object Object]
+    at console.<computed> [as error] (src/lib/logCatcher.ts:34:22)
+    at useViewerInitialization.useCallback[handleViewerReady] (src/core/globe/hooks/useViewerInitialization.ts:48:21)
+  32 |         console[name] = (...args: any[]) => {
+  33 |             // Forward to original console
+> 34 |             original.apply(console, args);
+     |                      ^
+  35 |
+  36 |             try {
+  37 |                 // Stringify arguments safely, aggressively optimizing performance  (src/lib/logCatcher.ts:34:22)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mz.jpg 404 in 259ms (next.js: 24ms, proxy.ts: 9ms, application-code: 225ms)
+ GET /cesium/Assets/Textures/moonSmall.jpg 404 in 241ms (next.js: 70ms, proxy.ts: 63ms, application-code: 108ms)
+[Marketplace/load] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async GET (src/app/api/marketplace/load/route.ts:39:40)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/load 200 in 3.3s (next.js: 3.0s, proxy.ts: 14ms, application-code: 272ms)
+[marketplace/disabled-builtins] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async getDisabledPluginIds (src/lib/marketplace/repository.ts:68:21)
+    at async GET (src/app/api/marketplace/disabled-builtins/route.ts:21:26)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/disabled-builtins 200 in 245ms (next.js: 4ms, proxy.ts: 5ms, application-code: 237ms)
+ GET / 200 in 169ms (next.js: 10ms, proxy.ts: 15ms, application-code: 144ms)
+ GET /cesium/Widgets/widgets.css 404 in 84ms (next.js: 13ms, proxy.ts: 10ms, application-code: 61ms)
+ GET /api/auth/session 200 in 181ms (next.js: 152ms, proxy.ts: 17ms, application-code: 12ms)
+ GET /cesium/Assets/approximateTerrainHeights.json 404 in 253ms (next.js: 20ms, proxy.ts: 10ms, application-code: 223ms)
+ GET /cesium/Assets/IAU2006_XYS/IAU2006_XYS_18.json 404 in 255ms (next.js: 17ms, proxy.ts: 20ms, application-code: 218ms)
+ GET /cesium/Assets/Images/ion-credit.png 404 in 138ms (next.js: 23ms, proxy.ts: 29ms, application-code: 86ms)
+ GET /cesium/Assets/Images/ion-credit.png 404 in 73ms (next.js: 9ms, proxy.ts: 6ms, application-code: 58ms)
+ GET /cesium/Workers/createVerticesFromHeightmap.js 404 in 153ms (next.js: 19ms, proxy.ts: 14ms, application-code: 121ms)
+ GET /cesium/Workers/transferTypedArrayTest.js 404 in 148ms (next.js: 71ms, proxy.ts: 12ms, application-code: 65ms)
+[browser] "⨯ unhandledRejection:" [object Object]
+
+[marketplace/disabled-builtins] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async getDisabledPluginIds (src/lib/marketplace/repository.ts:68:21)
+    at async GET (src/app/api/marketplace/disabled-builtins/route.ts:21:26)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/disabled-builtins 200 in 361ms (next.js: 5ms, proxy.ts: 7ms, application-code: 349ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mx.jpg 404 in 419ms (next.js: 69ms, proxy.ts: 25ms, application-code: 325ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_my.jpg 404 in 413ms (next.js: 132ms, proxy.ts: 21ms, application-code: 260ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_py.jpg 404 in 420ms (next.js: 94ms, proxy.ts: 25ms, application-code: 300ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_px.jpg 404 in 425ms (next.js: 42ms, proxy.ts: 25ms, application-code: 358ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_pz.jpg 404 in 411ms (next.js: 206ms, proxy.ts: 19ms, application-code: 186ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mz.jpg 404 in 413ms (next.js: 281ms, proxy.ts: 19ms, application-code: 113ms)
+[marketplace/disabled-builtins] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async getDisabledPluginIds (src/lib/marketplace/repository.ts:68:21)
+    at async GET (src/app/api/marketplace/disabled-builtins/route.ts:21:26)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/disabled-builtins 200 in 348ms (next.js: 31ms, proxy.ts: 19ms, application-code: 298ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_px.jpg 404 in 882ms (next.js: 45ms, proxy.ts: 30ms, application-code: 807ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mx.jpg 404 in 882ms (next.js: 323ms, proxy.ts: 32ms, application-code: 528ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_my.jpg 404 in 881ms (next.js: 376ms, proxy.ts: 31ms, application-code: 474ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_py.jpg 404 in 884ms (next.js: 477ms, proxy.ts: 32ms, application-code: 376ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_pz.jpg 404 in 858ms (next.js: 514ms, proxy.ts: 21ms, application-code: 324ms)
+ GET /cesium/Assets/Textures/SkyBox/tycho2t3_80_mz.jpg 404 in 407ms (next.js: 64ms, proxy.ts: 123ms, application-code: 220ms)
+[Marketplace/load] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async GET (src/app/api/marketplace/load/route.ts:39:40)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/load 200 in 276ms (next.js: 8ms, proxy.ts: 10ms, application-code: 258ms)
+[browser] An error occurred while rendering.  Rendering has stopped.
+[object Object]
+undefined
+    at console.<computed> [as error] (src/lib/logCatcher.ts:34:22)
+  32 |         console[name] = (...args: any[]) => {
+  33 |             // Forward to original console
+> 34 |             original.apply(console, args);
+     |                      ^
+  35 |
+  36 |             try {
+  37 |                 // Stringify arguments safely, aggressively optimizing performance  (src/lib/logCatcher.ts:34:22)
+[browser] [Cesium Render Error] Render loop crashed! Exception:
+    at console.<computed> [as error] (src/lib/logCatcher.ts:34:22)
+    at useViewerInitialization.useCallback[handleViewerReady] (src/core/globe/hooks/useViewerInitialization.ts:47:21)
+  32 |         console[name] = (...args: any[]) => {
+  33 |             // Forward to original console
+> 34 |             original.apply(console, args);
+     |                      ^
+  35 |
+  36 |             try {
+  37 |                 // Stringify arguments safely, aggressively optimizing performance  (src/lib/logCatcher.ts:34:22)
+[browser] [object Object]
+    at console.<computed> [as error] (src/lib/logCatcher.ts:34:22)
+    at useViewerInitialization.useCallback[handleViewerReady] (src/core/globe/hooks/useViewerInitialization.ts:48:21)
+  32 |         console[name] = (...args: any[]) => {
+  33 |             // Forward to original console
+> 34 |             original.apply(console, args);
+     |                      ^
+  35 |
+  36 |             try {
+  37 |                 // Stringify arguments safely, aggressively optimizing performance  (src/lib/logCatcher.ts:34:22)
+ GET /cesium/Assets/Textures/moonSmall.jpg 404 in 327ms (next.js: 22ms, proxy.ts: 10ms, application-code: 295ms)
+[marketplace/disabled-builtins] Error: Error [PrismaClientKnownRequestError]:
+Invalid `prisma.installedPlugin.findMany()` invocation:
+
+
+
+    at zr.handleRequestError (src/generated/prisma/runtime/client.js:69:8286)
+    at zr.handleAndLogRequestError (src/generated/prisma/runtime/client.js:69:7581)
+    at zr.request (src/generated/prisma/runtime/client.js:69:7288)
+    at async a (src/generated/prisma/runtime/client.js:79:6862)
+    at async getDisabledPluginIds (src/lib/marketplace/repository.ts:68:21)
+    at async GET (src/app/api/marketplace/disabled-builtins/route.ts:21:26)
+  67 | ...
+  68 | ...
+> 69 | ...t u=s?{modelName:s,...t.meta}:t.meta;throw new b.PrismaClientKnownRequestError(l,{code:...
+     |                                               ^
+  70 | ...
+  71 | ...
+  72 | ... {
+  code: 'ECONNREFUSED',
+  meta: { modelName: 'InstalledPlugin' },
+  clientVersion: '7.8.0'
+}
+ GET /api/marketplace/disabled-builtins 200 in 243ms (next.js: 6ms, proxy.ts: 22ms, application-code: 214ms)
+⨯ ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts:322:22
+Expected '>', got 'ident'
+  [90m320 |[0m
+  [90m321 |[0m             [36mreturn[0m (
+[31m[1m>[0m [90m322 |[0m                 <div style={{ padding: [32m"1rem"[0m, color: [32m"#fff"[0m, fontFamily: [32m"monospace"[0m }}>
+  [90m    |[0m                      [31m[1m^^^^^[0m
+  [90m323 |[0m                     {[90m/* Alerts System */[0m}
+  [90m324 |[0m                     <div style={{ position: [32m"fixed"[0m, top: [32m"80px"[0m, right: [32m"20px"[0m, zIndex: [35m...[0m
+  [90m325 |[0m                         {alerts.map(alert => (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+
+○ Compiling /_error ...
+ GET / 500 in 9.5s (next.js: 8.8s, proxy.ts: 145ms, application-code: 572ms)
+[browser] Uncaught Error: ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts:322:22
+Expected '>', got 'ident'
+  320 |
+  321 |             return (
+> 322 |                 <div style={{ padding: "1rem", color: "#fff", fontFamily: "monospace" }}>
+      |                      ^^^^^
+  323 |                     {/* Alerts System */}
+  324 |                     <div style={{ position: "fixed", top: "80px", right: "20px", zIndex: ...
+  325 |                         {alerts.map(alert => (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts:322:22)
+    at <unknown> (Error: (./src/plugins/shadow-bridge/ShadowBridgePlugin.ts:322:22)
+[browser] ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts:322:22
+Expected '>', got 'ident'
+  320 |
+  321 |             return (
+> 322 |                 <div style={{ padding: "1rem", color: "#fff", fontFamily: "monospace" }}>
+      |                      ^^^^^
+  323 |                     {/* Alerts System */}
+  324 |                     <div style={{ position: "fixed", top: "80px", right: "20px", zIndex: ...
+  325 |                         {alerts.map(alert => (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+[browser] ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts:322:22
+Expected '>', got 'ident'
+  320 |
+  321 |             return (
+> 322 |                 <div style={{ padding: "1rem", color: "#fff", fontFamily: "monospace" }}>
+      |                      ^^^^^
+  323 |                     {/* Alerts System */}
+  324 |                     <div style={{ position: "fixed", top: "80px", right: "20px", zIndex: ...
+  325 |                         {alerts.map(alert => (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+[browser] ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts:322:22
+Expected '>', got 'ident'
+  320 |
+  321 |             return (
+> 322 |                 <div style={{ padding: "1rem", color: "#fff", fontFamily: "monospace" }}>
+      |                      ^^^^^
+  323 |                     {/* Alerts System */}
+  324 |                     <div style={{ position: "fixed", top: "80px", right: "20px", zIndex: ...
+  325 |                         {alerts.map(alert => (
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Client Component Browser]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/plugins/shadow-bridge/ShadowBridgePlugin.ts [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Client Component SSR]
+    ./src/components/layout/AppShell.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+✓ Finished filesystem cache database compaction in 12.0s
