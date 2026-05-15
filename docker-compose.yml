@@ -6,8 +6,10 @@ services:
     container_name: aegis-sb-backend
     ports:
       - "8000:8000"
-    env_file:
-      - ./shadowbroker/backend/.env
+    environment:
+      - AIS_API_KEY=${AIS_API_KEY:-}
+      - OPENSKY_CLIENT_ID=${OPENSKY_CLIENT_ID:-}
+      - OPENSKY_CLIENT_SECRET=${OPENSKY_CLIENT_SECRET:-}
     volumes:
       - sb_data:/app/data
     restart: unless-stopped
@@ -51,6 +53,8 @@ services:
     environment:
       - NEXT_PUBLIC_WWV_PLUGIN_DATA_ENGINE_URL=http://localhost:8001
       - SHADOW_BRIDGE_URL=http://unified-api:8001
+      - NEXT_PUBLIC_WWV_EDITION=demo
+      - WWV_SKIP_LOCAL_DB=true
     depends_on:
       - unified-api
     restart: unless-stopped
