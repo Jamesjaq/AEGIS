@@ -17,51 +17,61 @@ Built for analysts, researchers, and humanitarian responders, AEGIS provides a s
 
 ---
 
-## 🛠️ How to Set It Up
+## 🛠️ Installation & Setup
 
-AEGIS is fully containerized and easy to deploy.
+Follow these steps to get AEGIS running on your machine.
 
 ### 1. Prerequisites
-- **Docker** and **Docker Compose** installed.
-- (Optional) Free API keys to unlock full global coverage (see [FREE_API_SETUP.md](./FREE_API_SETUP.md)).
+- **Docker** (Desktop or Engine)
+- **Docker Compose** (V2 recommended, usually included with Docker Desktop)
+- **Git**
 
-### 2. Quick Start (1-Click)
-Clone the repository and start all four services (ShadowBroker Backend, ShadowBroker Frontend, WorldWideView HUD, and Unified API):
-
+### 2. Clone the Repository
 ```bash
-git clone https://github.com/your-repo/aegis.git
-cd aegis
-docker-compose up -d
+git clone https://github.com/Jamesjaq/AEGIS.git
+cd AEGIS
 ```
 
-### 3. Accessing the HUD
-- **AEGIS COMMAND (3D Globe)**: `http://localhost:3000`
-- **ShadowBroker Dashboard (2D/Control)**: `http://localhost:3001`
-- **Unified API Health**: `http://localhost:8001/health`
+### 3. Configure Environment Variables (Optional but Recommended)
+To unlock full global coverage for aircraft and ships, you should add your free API keys.
+1. Copy the example environment file:
+   ```bash
+   cp shadowbroker/backend/.env.example shadowbroker/backend/.env
+   ```
+2. Edit `shadowbroker/backend/.env` and add your keys (e.g., `AIS_API_KEY`, `OPENSKY_CLIENT_ID`).
+3. Refer to [**FREE_API_SETUP.md**](./FREE_API_SETUP.md) for direct links to get these keys for free.
 
-### 4. Configuration (API Keys)
-To see real-time data for all layers, you need to provide free keys in the `.env` files.
-- Copy `shadowbroker/backend/.env.example` to `shadowbroker/backend/.env` and fill in your keys.
-- Refer to [**FREE_API_SETUP.md**](./FREE_API_SETUP.md) for direct links to get your free tokens for OpenSky, AIS Stream, NASA, etc.
+### 4. Start AEGIS
+Run the following command to build and start all services:
+```bash
+docker-compose up -d --build
+```
+*Note: If you have Docker Compose V2, you can also use `docker compose up -d --build`.*
+
+### 5. Access the Platform
+Once the containers are running, you can access the following:
+- **AEGIS COMMAND (3D Globe)**: [http://localhost:3000](http://localhost:3000)
+- **ShadowBroker Dashboard (2D Control)**: [http://localhost:3001](http://localhost:3001)
+- **Unified API Health**: [http://localhost:8001/health](http://localhost:8001/health)
 
 ---
 
 ## 🧠 Intelligence Engines
-AEGIS goes beyond visualization by correlating data across domains:
-- **Conflict Predictor**: Monitors GDELT news trends, NASA thermal anomalies, and internet outages to flag regional instability.
+AEGIS correlates data across multiple domains to provide early warnings:
+- **Conflict Predictor**: Analyzes GDELT news trends, NASA thermal anomalies, and internet outages to flag regional instability.
 - **Environmental Crime**: Detects suspicious vessel loitering in protected zones and critical drops in air quality.
-- **Supply Chain Alerts**: Analyzes maritime congestion, rail delays, and infrastructure status to warn of logistical bottlenecks.
+- **Supply Chain Alerts**: Monitors maritime congestion, rail delays, and infrastructure status to warn of logistical bottlenecks.
+
+## 🎬 Offline Demo Mode
+No internet? No problem.
+1. Open the 3D Globe at `http://localhost:3000`.
+2. Open the **AEGIS COMMAND** sidebar on the left.
+3. Click **"RUN OFFLINE DEMO"** to generate simulated OSINT telemetry for training and testing.
 
 ---
 
-## 🚀 Deployment Modes
-- **Online**: Connects to live APIs for real-time situational awareness.
-- **Offline/Demo**: Includes a built-in generator to simulate data flow for training or testing in disconnected environments.
-
----
-
-## 🏆 Award-Ready
-AEGIS is designed for the world's most prestigious open-source and humanitarian tech awards. It proves that sophisticated global intelligence can be built using only public goods, zero cost, and standard hardware.
+## 🏆 Award-Winning Technology
+AEGIS is designed to be the most complete, accessible OSINT platform in the world. By using only free-tier APIs and standard hardware, it empowers users globally to monitor, analyze, and respond to critical world events.
 
 ---
 *Created with ☕ and the belief that information should be free.* 🌍
